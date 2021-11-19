@@ -1,4 +1,5 @@
-import { useContext, useRef, useEffect } from "react"
+// import { useContext, useRef, useEffect } from "react"
+import { useContext, useRef } from "react"
 
 import { MapContext } from '../contexts/Map'
 import { Box, Text } from '@chakra-ui/react'
