@@ -7,11 +7,11 @@ const Bar = ({ bar }) => {
   const { selectedBar } = useContext(MapContext)
   const ref = useRef()
 
-  useEffect(() => {
-    if (bar.id === selectedBar.id) {
-      ref.current.scrollIntoView({ behavior: "smooth" })
-    }
-  }, [selectedBar, bar.id])
+  // useEffect(() => {
+  //   if (bar.id === selectedBar.id) {
+  //     // ref.current.scrollIntoView({ behavior: "smooth" })
+  //   }
+  // }, [selectedBar, bar.id])
   
 
   return (
