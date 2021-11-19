@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider } from "@chakra-ui/provider"
+import { Flex, Box, Center } from '@chakra-ui/react'
 
-function App() {
+import { MapContextProvider } from "./contexts/Map"
+import Map from "./components/Map"
+import List from './components/List'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ChakraProvider>
+      <MapContextProvider>
+        <Flex h="100vh" w="100%">
+          <Box h="100%" w="30%" p={5} overflowY="scroll">
+            <List />
+          </Box>
+          <Center background="teal" h="100%" w="70%">
+            <Map />
+          </Center>
+        </Flex>
+      </MapContextProvider>
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default App
