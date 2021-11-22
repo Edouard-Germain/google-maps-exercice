@@ -2,14 +2,13 @@ import { useContext } from 'react'
 
 import GoogleMapReact from 'google-map-react'
 import { MapContext } from '../contexts/Map'
-import { Spinner } from "@chakra-ui/react"
 import Marker from './Marker'
 
 const Map = () => {
   const { location, bars } = useContext(MapContext)
 
   if (!location) {
-    return <Spinner />
+    return <p>Chargement</p>
   }
 
   return (
