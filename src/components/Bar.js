@@ -1,5 +1,4 @@
-// import { useContext, useRef, useEffect } from "react"
-import { useContext, useRef } from "react"
+import { useContext, useRef, useEffect } from "react"
 
 import { MapContext } from '../contexts/Map'
 import { Box, Text } from '@chakra-ui/react'
@@ -8,11 +7,11 @@ const Bar = ({ bar }) => {
   const { selectedBar } = useContext(MapContext)
   const ref = useRef()
 
-  // useEffect(() => {
-  //   if (bar.id === selectedBar.id) {
-  //     // ref.current.scrollIntoView({ behavior: "smooth" })
-  //   }
-  // }, [selectedBar, bar.id])
+  useEffect(() => {
+    if (bar.id === selectedBar.id) {
+      ref.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [selectedBar, bar.id])
   
 
   return (
